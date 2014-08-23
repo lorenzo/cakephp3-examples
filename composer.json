@@ -1,0 +1,27 @@
+{
+	"name": "cakephp/app",
+	"description": "CakePHP skeleton app",
+	"homepage": "http://cakephp.org",
+	"type": "project",
+	"license": "MIT",
+	"require": {
+		"php": ">=5.4.19",
+		"cakephp/cakephp": "3.0.*-dev",
+		"mobiledetect/mobiledetectlib": "2.*"
+	},
+	"require-dev": {
+		"d11wtq/boris": "1.0.*"
+	},
+	"suggest": {
+		"phpunit/phpunit": "Allows automated tests to be run without system-wide install."
+	},
+	"autoload": {
+		"psr-4": {
+			"App\\": "src",
+			"App\\Test\\": "tests"
+		}
+	},
+	"scripts": {
+		"post-install-cmd": "App\\Console\\Installer::postInstall"
+	}
+}
